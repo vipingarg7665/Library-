@@ -1,0 +1,74 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bringo</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+ <link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
+ <link href="stylesheets/paper-dashboard.css" rel="stylesheet"/>
+ <link href="stylesheets/themify-icons.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+</head>
+<body style="background-image:url(image/lib2.jpg)">
+     <div class="header" id="myHeader">
+    <h2> BrinGo</h2>
+  </div>
+
+   <div style="opacity: .95">
+                <div class="jumbotron text-center">
+                        <i class="ti-flickr"></i>
+          
+                  <% if (message != null) { %>
+                    <div class="alert-danger"><%= message %></div>
+                  <% } %>
+                </div>
+  <form class="modal-content animate" action="/bringo/login" method="post">
+    <div class="imgcontainer">
+     
+     
+    </div>
+
+    <div class="container">
+     <label><b>Usertype</b></label>
+      <select name="usertype" style=" width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;" required>
+              <option value="student">student</option>
+              <option value="teacher">teacher</option>
+              <option value="library staff">library staff</option>
+              <option value="admin">admin</option>
+          </select>
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Username" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button  onclick="/bringo/user/student "type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    
+      
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+                    
+<div class="footer">
+    <p>Footer</p>
+
+</body>
+</html>

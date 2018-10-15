@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>bringo</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="stylesheets/animate.min.css" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="stylesheets/paper-dashboard.css" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="stylesheets/demo.css" rel="stylesheet" />
+
+    <!--  Fonts and icons     -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/themify-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="white" data-active-color="danger">
+    
+       
+    
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                 <center>  <a href="/bringo">BrinGo</a></center>
+                    
+                </div>
+    
+                <ul class="nav">
+                    <li class="active">
+                        <a href="/bringo/login">
+                            <i class="ti-panel"></i>
+                            <p>login</p>
+                        </a>
+                    </li>
+                    <li>
+                        
+            </div>
+        </div>
+
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">login</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-panel"></i>
+								<p>Stats</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-bell"></i>
+                                    <p class="notification">5</p>
+									<p>Notifications</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Notification 1</a></li>
+                                <li><a href="#">Notification 2</a></li>
+                                <li><a href="#">Notification 3</a></li>
+                                <li><a href="#">Notification 4</a></li>
+                                <li><a href="#">Another notification</a></li>
+                              </ul>
+                        </li>
+						<li>
+                            <a href="#">
+								<i class="ti-settings"></i>
+								<p>Settings</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-5">
+                        <div class="card card-user">
+                            
+                            <div class="content">
+                                <div class="author">
+                                 
+                                  <h4 class="title">login<br />
+                                    <h4>Login as</h4>
+                                  </h4>
+                                </div>
+                                     <form >
+  <center> <big><i class="ti-layout-grid3-alt"></i></big><br/></center>
+  <center><input type="text" required placeholder="login as" ><br><br/>
+  Teacher
+  <hr>
+ student
+  <hr>
+ library staff
+  <hr>
+Alumni Student
+</center>
+ 
+
+                               </div>
+                            <hr>
+                            <div class="text-center">
+                                <div class="row">
+                                    <div class="col-md-3 col-md-offset-1">
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                       
+                                    </div>
+                                    <div class="col-md-3">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                           
+
+                            
+                            <div class="content table-responsive table-full-width">
+                               
+
+                            </div>
+                        </div>
+                        <script>
+                            var myInput = document.getElementById("psw");
+                            var letter = document.getElementById("letter");
+                            var capital = document.getElementById("capital");
+                            var number = document.getElementById("number");
+                            var length = document.getElementById("length");
+                            
+                            // When the user clicks on the password field, show the message box
+                            myInput.onfocus = function() {
+                                document.getElementById("message").style.display = "block";
+                            }
+                            
+                            // When the user clicks outside of the password field, hide the message box
+                            myInput.onblur = function() {
+                                document.getElementById("message").style.display = "none";
+                            }
+                            
+                            // When the user starts to type something inside the password field
+                            myInput.onkeyup = function() {
+                              // Validate lowercase letters
+                              var lowerCaseLetters = /[a-z]/g;
+                              if(myInput.value.match(lowerCaseLetters)) {  
+                                letter.classList.remove("invalid");
+                                letter.classList.add("valid");
+                              } else {
+                                letter.classList.remove("valid");
+                                letter.classList.add("invalid");
+                              }
+                              
+                              // Validate capital letters
+                              var upperCaseLetters = /[A-Z]/g;
+                              if(myInput.value.match(upperCaseLetters)) {  
+                                capital.classList.remove("invalid");
+                                capital.classList.add("valid");
+                              } else {
+                                capital.classList.remove("valid");
+                                capital.classList.add("invalid");
+                              }
+                            
+                              // Validate numbers
+                              var numbers = /[0-9]/g;
+                              if(myInput.value.match(numbers)) {  
+                                number.classList.remove("invalid");
+                                number.classList.add("valid");
+                              } else {
+                                number.classList.remove("valid");
+                                number.classList.add("invalid");
+                              }
+                              
+                              // Validate length
+                              if(myInput.value.length >= 8) {
+                                length.classList.remove("invalid");
+                                length.classList.add("valid");
+                              } else {
+                                length.classList.remove("valid");
+                                length.classList.add("invalid");
+                              }
+                            }
+                            </script>
+
+                 
+                    <div class="col-lg-8 col-md-7">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Reset Password</h4>
+                            </div>
+                            <div class="content">
+                                <form>
+                                    
+
+          <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Username</label>
+   
+<input type="text" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{}$" title="abc@gamil.com" class="form-control border-input" placeholder="Username"  >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+
+                                                <label>old password</label>
+   
+                                                <input type="password" placeholder="old password" class="form-control border-input" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+
+                                                <label>new password</label>
+   
+                                                <input type="password" placeholder="new password" class="form-control border-input" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                      <div class="text-center">
+                                        <input type="submit" class="btn btn-info btn-fill btn-wd" onclick="location.href='/bringo/login'" >
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <i class="ti-view-list-alt"></i>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+ 
+<br/><br/>
+<br/><br/><br/>
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+
+                        <li>
+                           
+                                bringo
+                            </a>
+                        </li>
+                        <li>
+                            @2018
+                            </a>
+                        </li>
+                        <li>
+                        
+                                Licenses
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+				<div class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+	<script src="javascripts/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="javascripts/bootstrap-checkbox-radio.js"></script>
+
+	<!--  Charts Plugin -->
+	<script src="javascripts/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="javascripts/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+	<script src="javascripts/paper-dashboard.js"></script>
+
+	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+	<script src="javascripts/demo.js"></script>
+
+</html>

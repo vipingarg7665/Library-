@@ -1,0 +1,66 @@
+.header {
+    /*padding: 10px 16px;*/
+    background: #555;
+    color: green;
+      background-color: #f1f1f1;
+      padding: 30px;
+      text-align: center;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
+  
+  form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+  }
+  
+  form.example button {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+  }
+  
+  form.example button:hover {
+      background: #0b7dda;
+  }
+  
+  form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+  }
+  .footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     height:10%;
+     width: 100%;
+     background-color:#555;
+     color: white;
+     text-align: center;
+  }

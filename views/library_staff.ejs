@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .header {
+  /*padding: 10px 16px;*/
+  background: #555;
+  color: green;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   height:10%;
+   width: 100%;
+   background-color:#555;
+   color: white;
+   text-align: center;
+}</style>
+  <title>BrinGo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+
+
+
+
+<body style="background-color: gainsboro" style="background-image: url(image/stu1.jpg)">
+  
+  <div class="header" id="myHeader">
+    <h2> BrinGo</h2>
+  </div>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/bringo/user/student/issuebook"></a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Books <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="/bringo/user/student/uploadnotes"> Manage Book Database</a></li>
+                  <li><a href="/bringo/user/student/downloadnote">Book Records </a></li>
+              </ul>
+         </li>
+       <li><a href="#"> Ebooks </a></li>
+         <li><a href="#"> Fine Management </a></li>
+              <li><a href="#"> Student </a></li>
+         
+        <li><a href="/bringo/user/student/feedback">Feed Back</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+      <li><a href="/"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container bootstrap snippet">
+    <div class="row">
+  		<div class="col-sm-10"><h1>User name</h1></div>
+    </div>
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+             <div class="text-center">
+                 <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                 <h6>Upload a different photo...</h6>
+                  <input type="file" class="text-center center-block file-upload">
+             </div></hr><br>
+         </div><!--/col-3-->
+        <div class="col-sm-9">
+            <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <hr>
+                  <form class="form" action="##" method="post">
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="first_name"><h4>First name</h4></label>
+                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="last_name"><h4>Last name</h4></label>
+                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                          </div>
+                      </div>
+          
+                     
+          
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Mobile</h4></label>
+                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Email</h4></label>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                          </div>
+                      </div>
+                    
+                   
+                   
+              	</form>
+            </div><!--/tab-pane-->
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+    </div><!--/row-->
+
+<div class="footer">
+    <p>Footer</p>
+  </div>
+
+</body>
+</html>

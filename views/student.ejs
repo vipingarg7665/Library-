@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<link rel="stylesheets type="text/css" src="stylesheets/student.css">-->
+  <style>
+      /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 500px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+
+
+
+    .header {
+  /*padding: 10px 16px;*/
+  background: #555;
+  color: green;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   height:10%;
+   width: 100%;
+   background-color:#555;
+   color: white;
+   text-align: center;
+}</style>
+  <title>BrinGo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>BrinGO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+</head>
+
+
+
+
+
+
+
+
+<body  style="background-image: url(image/images.jpeg) ;background-size: cover">
+  
+  <div class="header" id="myHeader">
+    <h2> BrinGo</h2>
+  </div>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/bringo/user/student/issuebook">Issue Book</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Notes <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><button onclick="document.getElementById('id01').style.display='block'" style=" background-color:white;
+                    border: none;
+                    color: black;
+                    padding: 3px 3px;
+                    padding-right: 15px;
+                    
+                    
+                    font-size: 15px;"> Uploads Notes</button></li>
+                  <li><a href="/bringo/user/student/downloadnotes"> Downloads Notes</a></li>
+              </ul>
+         </li>
+    
+        <li><a href="/bringo/user/student/user">Online Request</a></li>
+        <li><a href="/bringo/user/student/feedback">Feed Back</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <!--    <li><a href="/bringo/user/></a></li>-->
+      <li> <a href="/"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+
+    </ul>
+  </div>
+</nav>
+<div class="container bootstrap snippet">
+    <div class="row">
+  		<div class="col-sm-10"><h1>User name</h1></div>
+    </div>
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+             <div class="text-center">
+                 <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                  <input type="file" class="text-center center-block file-upload">
+             </div>
+         </div><!--/col-3-->
+        <div class="col-sm-9">
+            <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                
+                  <form class="form" action="##" method="post">
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="first_name"><h4>First name</h4></label>
+                              <input type="text" class="form-control" name="firstname" id="first_name" placeholder="first name" title="enter your first name if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="last_name"><h4>Last name</h4></label>
+                              <input type="text" class="form-control" name="lastname"  placeholder="last name" title="enter your last name if any." required>
+                          </div>
+                      </div>
+          
+                     
+          
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Contact No</h4></label>
+                              <input type="text" class="form-control" name="contactno" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                          </div>
+                      </div>
+                      <div class="form-group"></div>
+                      
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Email</h4></label>
+                             <input type="email" class="form-control" name="email" id="email"  placeholder="you@email.com" title="enter your email.">
+                          </div>
+                      </div>
+                     
+                     <br>
+                     <br>
+                      <div class="well">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>Book_Id</th>
+                                  <th>Book Name</th>
+                                  <th>Author</th>
+                                  <th>Edition</th>
+                                  <th style="width: 36px;"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>
+                                      <a href="user.html"><i class="icon-pencil"></i></a>
+                                      <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>
+                                      <a href="user.html"><i class="icon-pencil"></i></a>
+                                      <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>
+                                      <a href="user.html"><i class="icon-pencil"></i></a>
+                                      <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>
+                                      <a href="user.html"><i class="icon-pencil"></i></a>
+                                      <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+                                  </td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                        </div>
+                        
+                   
+                   
+              	</form>
+            </div><!--/tab-pane-->
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+    </div><!--/row-->
+
+
+
+<div class="footer">
+    <p>Footer</p>
+  </div>
+
+  <div id="id01" class="modal">
+    
+  
+      <form class="modal-content animate" action="/action_page.php">
+          
+        <div class="imgcontainer">
+            <h3>Upload File</h3>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+    
+          <label for="psw"><b>University Id</b></label>
+          <input type="password" placeholder="Enter University Id" name="university id" required>
+            
+             <label for="psw"><b>Subject</b></label>
+          <input type="password" placeholder="Enter Subject" name="subject" required>
+            
+            <label>
+            <input type="file" name="myfile"  multiple>
+            </label>
+         
+            <button type="submit" >Submit</button>
+          
+        
+        </div>
+    
+        
+      </form>
+    </div>
+    
+   
+    
+
+</body>
+</html>

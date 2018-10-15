@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 20%;
+    co
+}
+
+/* Middle column */
+.column.middle {
+    width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+    .header {
+  /*padding: 10px 16px;*/
+  background: #555;
+  color: green;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   height:10%;
+   width: 100%;
+   background-color:#555;
+   color: white;
+   text-align: center;
+}
+ .imge{
+   filter: grayscale(100%);
+ }</style>
+  <title>BrinGo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+
+
+
+
+<body style="background-image: url(/image/images.jpeg);background-size: cover;">
+  
+  <div class="header" id="myHeader">
+    <h2> BrinGo</h2>
+  </div>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+         <!--   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+    <li><a href="#">Page 1-1</a></li>
+         <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>-->
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/bringo/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/bringo/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!--<form class="example" action="/action_page.php"  style="margin:auto;max-width:900px">
+  <input type="text" placeholder="Search Book......" name="search">
+  <button type="submit"><i class="fa fa-search"></i>search</button>
+</form>-->
+
+  <div class="column side"></div>
+    
+  </div>
+  <div class="column middle">
+    <h1>Library</h1>
+    <p style="font-style: oblique;font-size: 30px;color:black">
+      Library is regarded as the heart of any institute , many institute understand the importance the importance of the library  to the 
+      the growth of the institute and their esteem users(Students). 
+      library management system support the general requirement of the library like acquisition, cataloguing, circulation.
+      Library project System  that offers many flexible and convenient features, allowing librarians and library user to maximize time 
+      and efficiency. Library System gives the all detailed information about students, staff and books.it will track on the how many books
+       avilable in library and books issued to the students.
+      It shows popular book among the students. it will provide book lost in library. It keeps the record of the suppliers and book binders.</p>
+
+  
+  </div>
+  <div class="column side">
+    
+  </div>
+
+  
+
+
+<div class="footer">
+    <p>Footer</p>
+  </div>
+
+</body>
+</html>
